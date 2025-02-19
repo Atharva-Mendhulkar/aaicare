@@ -12,7 +12,7 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-pink-100 to-peach-200">
       <motion.div className="absolute inset-0 z-0" style={{ y }}>
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="./aai.png?height=1080&width=1920"
           alt="Medical illustration"
           layout="fill"
           objectFit="cover"
