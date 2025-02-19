@@ -180,7 +180,7 @@ const AashaChatbot = ({ fullScreen = false }: AashaChatbotProps) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute bottom-20 right-0 w-[500px] bg-white rounded-xl shadow-xl overflow-hidden"
+            className="absolute bottom-20 right-0 w-[500px] h-[500px] bg-white rounded-xl shadow-xl overflow-hidden" // Changed height to 500px
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -189,7 +189,7 @@ const AashaChatbot = ({ fullScreen = false }: AashaChatbotProps) => {
               <h3 className="text-lg font-semibold text-pink-800">Chat with Aasha</h3>
               <p className="text-sm text-pink-600">Your maternal health assistant</p>
             </div>
-            <div className="h-[500px] overflow-y-auto p-4 space-y-4">
+            <div className="h-[400px] overflow-y-auto p-4 space-y-4"> 
               {messages.map((message) => (
                 <div key={message.id} className={`${message.role === "user" ? "text-right" : "text-left"}`}>
                   <span
@@ -210,7 +210,7 @@ const AashaChatbot = ({ fullScreen = false }: AashaChatbotProps) => {
               )}
               <div ref={messagesEndRef} />
             </div>
-            <form onSubmit={handleSubmit} className="p-4 border-t">
+            <form onSubmit={handleSubmit} className="p-4 border-t absolute bottom-0 left-0 right-0 bg-white"> 
               <div className="flex space-x-2">
                 <input
                   type="text"

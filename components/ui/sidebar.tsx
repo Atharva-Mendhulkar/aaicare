@@ -25,6 +25,7 @@ const SIDEBAR_WIDTH = "16rem"
 const SIDEBAR_WIDTH_MOBILE = "18rem"
 const SIDEBAR_WIDTH_ICON = "3rem"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
+const CHATBOX_HEIGHT = "200px"
 
 type SidebarContext = {
   state: "expanded" | "collapsed"
@@ -202,6 +203,7 @@ const Sidebar = React.forwardRef<
             style={
               {
                 "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
+                "--chatbox-height": CHATBOX_HEIGHT,
               } as React.CSSProperties
             }
             side={side}
@@ -271,7 +273,7 @@ const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
-      className={cn("h-7 w-7", className)}
+      className={cn("h-7 w-7 mt-2", className)} // Added mt-2 for margin-top
       onClick={(event) => {
         onClick?.(event)
         toggleSidebar()
