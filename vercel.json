@@ -1,9 +1,6 @@
 {
+  "version": 2,
   "builds": [
-    {
-      "src": "api/*.py",
-      "use": "@vercel/python@3.1.0"
-    },
     {
       "src": "package.json",
       "use": "@vercel/next"
